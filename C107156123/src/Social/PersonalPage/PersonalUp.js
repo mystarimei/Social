@@ -30,7 +30,7 @@ export default class PersonalUp extends React.Component {
                     <Text style={{ margin: 8 }}>{Myposts[0].introduce}</Text>
                 </View>
                 <View style={{ flex: 0.65, }}>
-                    <View style={{ flex: 0.5, flexDirection: 'row', justifyContent: 'space-around', paddingTop: 5 }}>
+                    <View style={{ flex: 0.5, flexDirection: 'row', justifyContent: 'space-between', paddingTop: 5 }}>
                         <View style={{ paddingTop: 15, alignItems: 'center' }}>
                             <Text style={{ fontSize: 20 }}>貼文</Text>
                             <Text style={{ fontSize: 22 }}>{Myposts.length}</Text>
@@ -40,14 +40,6 @@ export default class PersonalUp extends React.Component {
                             <Text style={{ fontSize: 22 }}>{FavoritePosts.length}</Text>
                         </View>
                     </View>
-                    {/* <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
-                        <View style={{
-                            backgroundColor: '#fff', borderRadius: 10, elevation: 3, padding: 10, borderWidth: 1, borderColor: 'gray'
-                        }}><TouchableOpacity onPress={() => handleToEditPersonal()}>
-                                <Text>編輯個人檔案</Text>
-                            </TouchableOpacity>
-                        </View>
-                    </View> */}
                 </View>
             </View >
         )

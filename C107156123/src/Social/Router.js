@@ -182,7 +182,7 @@ class Route extends React.Component {
 
   handleEditPost = (data) => {
     const newPosts = this.state.posts.map((post) => {
-      return post.posterId === 1 ? { ...post, comment: data.comment } : { ...post }
+      return post.id === data.id ? { ...post, comment: data.comment } : { ...post }
     })
     this.setState({
       posts: newPosts
@@ -224,10 +224,10 @@ class Route extends React.Component {
           <Stack key="add" title="貼文" hideNavBar={true} icon={TabIconAdd}>
             <Scene key="createPost" component={CreatePost} renderLeftButton={null} posts={posts} handleAddPost={this.handleAddPost} />
           </Stack>
-          <Stack icon={TabIconPersonal}>
+          {/* <Stack icon={TabIconPersonal}>
             <Scene key="personal" title="個人簡介" hideNavBar={true} component={Personal} renderLeftButton={null} MyPosts={MyPosts} FavoritePosts={FavoritePosts} handleToEditPersonal={this.handleToEditPersonal} handlePhotoDetail={this.handlePhotoDetail} />
             <Scene key="EditPersonal" title="編輯個人檔案" hideNavBar={true} component={EditPersonal} />
-          </Stack>
+          </Stack> */}
         </Tabs>
       </Router>
     );

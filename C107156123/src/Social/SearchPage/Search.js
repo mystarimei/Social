@@ -27,7 +27,7 @@ export default class Search extends React.Component {
         }
         this.setState({
             search: value,
-            searchItems: searchItems
+            searchItems: searchItems,
         })
     };
 
